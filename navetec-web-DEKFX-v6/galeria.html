@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - DEKFX Boat Flooring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dek: {
+                teal: '#4FC3C0',
+                tealdark: '#2E9B98',
+                navy: '#1D5A82',
+                navydark: '#134058',
+                cream: '#F8F5EF',
+                creamdark: '#EFEAE0',
+                faint: '#E4DFD2',
+                ink: '#233238',
+                muted: '#748087',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dek-cream text-dek-ink antialiased selection:bg-dek-teal selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="bg-dek-cream/90 backdrop-blur-md border-b border-dek-creamdark fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-dek-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.5 15h17l-2 4.3a1 1 0 01-.9.7H6.4a1 1 0 01-.9-.7L3.5 15z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V4"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5l5.5 8.5H12z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7L7.5 13H12z"></path>
+                </svg>
+                <span class="flex flex-col leading-none">
+                    <span class="text-xl font-black tracking-wider uppercase font-heading"><span class="text-dek-tealdark">DEK</span><span class="text-dek-navy">FX</span></span>
+                    <span class="text-[9px] font-bold tracking-[3px] text-dek-muted uppercase">Boat Flooring</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide text-dek-muted">
+                <a href="index.html#servicios" data-i18n="nav_services" class="hover:text-dek-tealdark transition-colors">Servicios</a>
+                <a href="index.html#proceso" data-i18n="nav_process" class="hover:text-dek-tealdark transition-colors">Nuestro Proceso</a>
+                <a href="index.html#proyectos" data-i18n="nav_before_after" class="hover:text-dek-tealdark transition-colors">Antes y Después</a>
+                <a href="galeria.html" data-i18n="nav_gallery" class="text-dek-tealdark">Galería</a>
+                <a href="index.html#cotizador" data-i18n="footer_calc_quote" class="hover:text-dek-tealdark transition-colors">Calcular Presupuesto</a>
+                <a href="index.html#contacto" data-i18n="nav_contact" class="hover:text-dek-tealdark transition-colors">Contacto</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-3">
+                <div class="flex items-center bg-white border border-dek-creamdark rounded-full p-1 text-xs">
+                    <button type="button" data-lang-btn="es" class="px-3 py-1.5 rounded-full font-bold transition-colors text-dek-muted">ES</button>
+                    <button type="button" data-lang-btn="en" class="px-3 py-1.5 rounded-full font-bold transition-colors text-dek-muted">EN</button>
+                </div>
+                <a href="index.html#contacto" data-i18n="nav_cta" class="bg-dek-navy hover:bg-dek-navydark text-white font-bold text-sm px-5 py-2.5 rounded-xl transition duration-300 shadow-lg shadow-dek-navy/20">
+                    Solicitar Presupuesto
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-dek-muted focus:outline-none hover:text-dek-ink">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-dek-creamdark px-4 py-6 space-y-4">
+            <div class="flex items-center bg-dek-cream border border-dek-creamdark rounded-full p-1 text-xs w-fit">
+                <button type="button" data-lang-btn="es" class="px-4 py-1.5 rounded-full font-bold transition-colors text-dek-muted">ES</button>
+                <button type="button" data-lang-btn="en" class="px-4 py-1.5 rounded-full font-bold transition-colors text-dek-muted">EN</button>
+            </div>
+            <a href="index.html#servicios" data-i18n="nav_services" class="block text-dek-muted hover:text-dek-ink font-medium text-lg">Servicios</a>
+            <a href="index.html#proceso" data-i18n="nav_process" class="block text-dek-muted hover:text-dek-ink font-medium text-lg">Nuestro Proceso</a>
+            <a href="index.html#proyectos" data-i18n="nav_before_after" class="block text-dek-muted hover:text-dek-ink font-medium text-lg">Antes y Después</a>
+            <a href="galeria.html" data-i18n="nav_gallery" class="block text-dek-tealdark font-medium text-lg">Galería</a>
+            <a href="index.html#cotizador" data-i18n="footer_calc_quote" class="block text-dek-muted hover:text-dek-ink font-medium text-lg">Calcular Presupuesto</a>
+            <a href="index.html#contacto" data-i18n="nav_contact" class="block text-dek-muted hover:text-dek-ink font-medium text-lg">Contacto</a>
+            <a href="index.html#contacto" data-i18n="nav_cta" class="block bg-dek-navy text-center text-white font-bold py-3 rounded-xl">Solicitar Presupuesto</a>
+        </div>
+    </header>
+
+    <!-- GALLERY HEADER -->
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="text-dek-tealdark text-sm font-bold uppercase tracking-wider" data-i18n="gal_kicker">Nuestro Trabajo</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-dek-navydark mt-2 font-heading" data-i18n="gal_title">Galería de Proyectos</h1>
+            <p class="text-dek-muted mt-4 text-base sm:text-lg max-w-2xl mx-auto" data-i18n="gal_desc">Una muestra de instalaciones y acabados. Haz clic en cualquier foto para verla en grande.</p>
+        </div>
+    </section>
+
+    <!-- PHOTO GRID -->
+    <section class="pb-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Filled by script.js with random photos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-dek-navydark/95 z-[100] flex items-center justify-center p-4 sm:p-10">
+        <button id="lightbox-close" class="absolute top-5 right-5 sm:top-8 sm:right-8 text-white/80 hover:text-white text-4xl leading-none z-10">&times;</button>
+        <button id="lightbox-prev" class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-4xl leading-none z-10">&#8249;</button>
+        <button id="lightbox-next" class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-4xl leading-none z-10">&#8250;</button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-2xl shadow-2xl object-contain">
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-dek-muted text-sm py-12 px-4 sm:px-6 lg:px-8 border-t border-dek-creamdark">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-2">
+                <svg class="w-6 h-6 text-dek-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.5 15h17l-2 4.3a1 1 0 01-.9.7H6.4a1 1 0 01-.9-.7L3.5 15z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V4"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5l5.5 8.5H12z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7L7.5 13H12z"></path>
+                </svg>
+                <span class="text-lg font-black tracking-wider uppercase font-heading"><span class="text-dek-tealdark">DEK</span><span class="text-dek-navy">FX</span></span>
+            </div>
+            <div class="text-center md:text-right">
+                <p data-i18n="footer_copyright">&copy; 2026 DEKFX Boat Flooring. Todos los derechos reservados.</p>
+                <p class="text-xs text-dek-muted mt-1" data-i18n="footer_tagline">Suelos antideslizantes de alta resistencia e ingeniería de precisión náutica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
